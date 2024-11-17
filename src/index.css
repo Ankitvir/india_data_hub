@@ -11,3 +11,92 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.left-list {
+  background-color: #f8f9fa;
+  padding: 20px;
+  width: 25%;
+}
+
+.left-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-list li {
+  padding: 10px 0;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+.left-list li:hover {
+  color: #007bff;
+}
+.right-list {
+  background-color: #fff;
+  padding: 20px;
+  width: 70%;
+}
+
+.right-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.right-list th, .right-list td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.right-list tr:hover {
+  background-color: #f1f1f1;
+}
+.main-page {
+  display: flex;
+  gap: 20px;
+}
+
+.left-list {
+  font-family: Arial, sans-serif;
+}
+
+.nested-list,
+.frequent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  margin: 2px 0;
+}
+
+.list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-icon {
+  float: right;
+  font-weight: bold;
+}
+
+.frequent-section {
+  margin-top: 20px;
+}
+
+.frequent-item {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+}
+
+.frequent-item strong {
+  display: block;
+}
+
+.frequent-item small {
+  color: #666;
+}

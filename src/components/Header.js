@@ -36,8 +36,15 @@ const Header = () => {
                     <li><a href="/home" style={{ textDecoration: 'none', color: '#fff' }}>Home</a></li>
                     <li><a href="/about" style={{ textDecoration: 'none', color: '#fff' }}>About</a></li>
                     <li><a href="/contact" style={{ textDecoration: 'none', color: '#fff' }}>Contact</a></li>
+                    <li>  <button onClick={()=>{
+                    localStorage.removeItem("islogged")
+                    window.location.reload();
+                }}>Log Out</button></li>
                 </ul>
+              
             </nav>
+
+
         </header>
     );
 };

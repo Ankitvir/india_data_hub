@@ -1,19 +1,36 @@
-import React from "react";
-import LoginPage from "./pages/LoginPage";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import LoginForm from "./pages/LoginPage";
 import ProductCatalog from "./pages/ProductCatalog";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
+  const [login, setLogin] = useState(false);
+
+  useEffect(() => {
+    const islogged = localStorage.getItem("islogged");
+    setLogin(Boolean(islogged)); // Ensure login state reflects localStorage
+  }, []);
+
   return (
     <div>
       <Router>
+      <Header />
+
         <Routes>
-          <Route path="/catalog" element={<ProductCatalog />} />
-          {/* Add other routes here as needed */}
+          {login ? (
+            <>
+              <Route path="/dashboard" element={<ProductCatalog />} />
+              <Route path="*" element={<Navigate to="/dashboard" />} />
+            </>
+          ) : (
+            <>
+              <Route path="/" element={<LoginForm />} />
+              <Route path="*" element={<Navigate to="/" />} />
+            </>
+          )}
         </Routes>
       </Router>
-
-      <LoginPage />
     </div>
   );
 }

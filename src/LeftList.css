@@ -1,0 +1,66 @@
+.left-list {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 40%; /* Adjust width as needed */
+  max-width: 300px; /* Optional for responsive layout */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-list h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nested-list {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+  max-height: 600px; /* Fixed height for scrollable categories */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* For modern browsers */
+  scrollbar-color: #007bff #f1f1f1; /* Scrollbar thumb and track colors */
+}
+
+.nested-list::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.nested-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.nested-list::-webkit-scrollbar-thumb {
+  background: #007bff; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded scrollbar thumb */
+}
+
+.list-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-icon {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+  transition: transform 0.2s;
+}
+
+.dropdown-icon:hover {
+  transform: scale(1.2);
+}
